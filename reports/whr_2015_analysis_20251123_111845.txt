@@ -1,0 +1,136 @@
+=== BASIC STATISTICS ===
+{
+  "basic_stats": {
+    "rows": 3,
+    "columns": 6,
+    "missing_values": {
+      "Class": 0,
+      "Survived sum": 0,
+      "Died sum": 0,
+      "Total sum": 0,
+      "Percent_Survive_Total": 0,
+      "Percent_Died_Total": 0
+    },
+    "dtypes": {
+      "Class": "object",
+      "Survived sum": "int64",
+      "Died sum": "int64",
+      "Total sum": "int64",
+      "Percent_Survive_Total": "float64",
+      "Percent_Died_Total": "float64"
+    },
+    "memory_usage": 0.00041866302490234375
+  },
+  "numeric_stats": {
+    "basic": {
+      "Survived sum": {
+        "count": 3.0,
+        "mean": 166.33333333333334,
+        "std": 43.684474740270524,
+        "min": 118.0,
+        "25%": 148.0,
+        "50%": 178.0,
+        "75%": 190.5,
+        "max": 203.0
+      },
+      "Died sum": {
+        "count": 3.0,
+        "mean": 272.3333333333333,
+        "std": 222.55411326985922,
+        "min": 122.0,
+        "25%": 144.5,
+        "50%": 167.0,
+        "75%": 347.5,
+        "max": 528.0
+      },
+      "Total sum": {
+        "count": 3.0,
+        "mean": 438.6666666666667,
+        "std": 232.37971799047637,
+        "min": 285.0,
+        "25%": 305.0,
+        "50%": 325.0,
+        "75%": 515.5,
+        "max": 706.0
+      },
+      "Percent_Survive_Total": {
+        "count": 3.0,
+        "mean": 0.430258372742,
+        "std": 0.18677455351654487,
+        "min": 0.252124645892,
+        "25%": 0.3330798668055,
+        "50%": 0.414035087719,
+        "75%": 0.519325236167,
+        "max": 0.624615384615
+      },
+      "Percent_Died_Total": {
+        "count": 3.0,
+        "mean": 0.5697416272579999,
+        "std": 0.18677455351654487,
+        "min": 0.375384615385,
+        "25%": 0.480674763833,
+        "50%": 0.585964912281,
+        "75%": 0.6669201331945,
+        "max": 0.747875354108
+      }
+    },
+    "skew": {
+      "Survived sum": -1.1160820590189844,
+      "Died sum": 1.6527260101207872,
+      "Total sum": 1.6744946384541666,
+      "Percent_Survive_Total": 0.3879221328245957,
+      "Percent_Died_Total": -0.38792213282459287
+    },
+    "kurtosis": {
+      "Survived sum": NaN,
+      "Died sum": NaN,
+      "Total sum": NaN,
+      "Percent_Survive_Total": NaN,
+      "Percent_Died_Total": NaN
+    },
+    "top_correlations": [
+      {
+        "col1": "Percent_Survive_Total",
+        "col2": "Percent_Died_Total",
+        "correlation": -1.0
+      },
+      {
+        "col1": "Died sum",
+        "col2": "Total sum",
+        "correlation": 0.9824836257864914
+      },
+      {
+        "col1": "Died sum",
+        "col2": "Percent_Survive_Total",
+        "correlation": -0.8787206031356262
+      },
+      {
+        "col1": "Died sum",
+        "col2": "Percent_Died_Total",
+        "correlation": 0.8787206031356257
+      },
+      {
+        "col1": "Total sum",
+        "col2": "Percent_Survive_Total",
+        "correlation": -0.7743774628337599
+      }
+    ]
+  },
+  "categorical_stats": {
+    "Class": {
+      "unique_values": 3,
+      "top_5_values": {
+        "First": 1,
+        "Second": 1,
+        "Third": 1
+      },
+      "null_count": "0",
+      "is_binary": false,
+      "entropy": 1.584962500721156
+    }
+  },
+  "datetime_stats": {}
+}
+
+=== AI-INTERPRETATION ===
+None
