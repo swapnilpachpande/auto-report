@@ -1,6 +1,16 @@
 import os
+import sys
 from pathlib import Path
 import pandas as pd
+
+# Add project root to path for imports
+project_root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(project_root))
+
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv(project_root / ".env")
+
 from src.ai_summary import AiSummary
 from src.data_ingestion import DataIngestion
 import json
@@ -65,14 +75,23 @@ def generate_report(df_oai: pd.DataFrame = None):
         
         # TODO add the code to get the eda reports
         # Call function from eda_visualization.py
+        # visualization_paths = eda_visualization.generate_visualizations(df)
 
-        # TODO add the code to generate PDF report
-        # Call a function from pdf_report.py
+        # Generate PDF report with visualizations
+        from src.pdf_report import generate_pdf_report
+        report_path = project_root / "reports"
+        
+        # For now, pass None for visualization_paths; uncomment above to add visualizations
+        pdf_file = generate_pdf_report(
+            report_path=report_path,
+            basic_stats=basic_summary,
+            ai_summary=ai_summary,
+            visualization_paths=None  # Replace with visualization_paths when eda_visualization is ready
+        )
 
-        # Save the report with timestamp
+        # Save the report with timestamp (text version for reference)
         from datetime import datetime
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_path = project_root / "reports"
         report_path.mkdir(exist_ok=True)
         output_file = report_path / f"whr_2015_analysis_{timestamp}.txt"
 
@@ -95,11 +114,12 @@ def generate_report(df_oai: pd.DataFrame = None):
         #print(report_text)
         print("=" * 80)
 
-        print(f"\n✅ Report generation complete! Saved to: {output_file}")
-        return str(output_file), report_text
+        print(f"\n Text report saved to: {output_file}")
+        print(f" PDF report generated: {pdf_file}")
+        return str(pdf_file), report_text
 
     except Exception as e:
-        print(f"\n❌ Error generating report: {str(e)}")
+        print(f"\n Error generating report: {str(e)}")
         raise
 
 if __name__ == "__main__":

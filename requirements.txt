@@ -1,2 +1,8 @@
 openai
 pandas
+reportlab
+matplotlib
+seaborn
+numpy
+python-dotenv
+Pillow

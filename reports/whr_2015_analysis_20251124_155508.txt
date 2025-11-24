@@ -1,0 +1,241 @@
+=== BASIC STATISTICS ===
+{
+  "basic_stats": {
+    "rows": 2200,
+    "columns": 12,
+    "missing_values": {
+      "State": 0,
+      "Year": 0,
+      "Population": 0,
+      "Violent Crime Rate": 0,
+      "Murder Rate": 0,
+      "Forcible Rape Rate": 0,
+      "Robbery Rate": 0,
+      "Aggraveted Assault Rate": 0,
+      "Property Crime Rate": 0,
+      "Burglary Rate": 0,
+      "Larceny & Theft Rate": 0,
+      "Motor Vehicle Theft Rate": 0
+    },
+    "dtypes": {
+      "State": "object",
+      "Year": "int64",
+      "Population": "int64",
+      "Violent Crime Rate": "float64",
+      "Murder Rate": "float64",
+      "Forcible Rape Rate": "float64",
+      "Robbery Rate": "float64",
+      "Aggraveted Assault Rate": "float64",
+      "Property Crime Rate": "float64",
+      "Burglary Rate": "float64",
+      "Larceny & Theft Rate": "float64",
+      "Motor Vehicle Theft Rate": "float64"
+    },
+    "memory_usage": 0.32184600830078125
+  },
+  "numeric_stats": {
+    "basic": {
+      "Year": {
+        "count": 2200.0,
+        "mean": 1981.5,
+        "std": 12.701312089143062,
+        "min": 1960.0,
+        "25%": 1970.75,
+        "50%": 1981.5,
+        "75%": 1992.25,
+        "max": 2003.0
+      },
+      "Population": {
+        "count": 2200.0,
+        "mean": 4609092.055909091,
+        "std": 5009459.774083804,
+        "min": 226167.0,
+        "25%": 1182750.0,
+        "50%": 3187500.0,
+        "75%": 5440050.25,
+        "max": 35484453.0
+      },
+      "Violent Crime Rate": {
+        "count": 2200.0,
+        "mean": 369.8599452018818,
+        "std": 243.08331110446701,
+        "min": 9.5,
+        "25%": 173.299995425,
+        "50%": 320.90000915,
+        "75%": 522.64997865,
+        "max": 1244.300049
+      },
+      "Murder Rate": {
+        "count": 2200.0,
+        "mean": 6.3750454590881365,
+        "std": 3.758245746276311,
+        "min": 0.200000003,
+        "25%": 3.200000048,
+        "50%": 5.699999809,
+        "75%": 9.100000381,
+        "max": 20.29999924
+      },
+      "Forcible Rape Rate": {
+        "count": 2200.0,
+        "mean": 26.85890909496359,
+        "std": 15.82776335155983,
+        "min": 0.8000000119,
+        "25%": 14.575000285000002,
+        "50%": 25.39999962,
+        "75%": 36.72500038,
+        "max": 102.1999969
+      },
+      "Robbery Rate": {
+        "count": 2200.0,
+        "mean": 115.55099994198909,
+        "std": 98.88084482326687,
+        "min": 1.899999976,
+        "25%": 38.0749988525,
+        "50%": 93.85000228999999,
+        "75%": 160.3999939,
+        "max": 684.0
+      },
+      "Aggraveted Assault Rate": {
+        "count": 2200.0,
+        "mean": 221.0713181813586,
+        "std": 151.97502797144742,
+        "min": 3.599999905,
+        "25%": 100.9749985,
+        "50%": 190.75,
+        "75%": 308.17500305000004,
+        "max": 785.7000122000001
+      },
+      "Property Crime Rate": {
+        "count": 2200.0,
+        "mean": 3736.734635390227,
+        "std": 1454.8545724846174,
+        "min": 573.0999756,
+        "25%": 2640.64996325,
+        "50%": 3815.75,
+        "75%": 4703.5250245,
+        "max": 7996.0
+      },
+      "Burglary Rate": {
+        "count": 2200.0,
+        "mean": 965.0059091821364,
+        "std": 446.3764867313083,
+        "min": 182.6000061,
+        "25%": 618.62501525,
+        "50%": 910.4500122,
+        "75%": 1232.675049,
+        "max": 2906.699951
+      },
+      "Larceny & Theft Rate": {
+        "count": 2200.0,
+        "mean": 2412.479272839318,
+        "std": 955.2700540338183,
+        "min": 293.2999878,
+        "25%": 1700.3999942500002,
+        "50%": 2495.1500244999997,
+        "75%": 3025.5250244999997,
+        "max": 5106.100098
+      },
+      "Motor Vehicle Theft Rate": {
+        "count": 2200.0,
+        "mean": 359.2308181381818,
+        "std": 207.74528640476956,
+        "min": 48.29999924,
+        "25%": 195.8999939,
+        "50%": 324.4500122,
+        "75%": 471.099998475,
+        "max": 1571.099976
+      }
+    },
+    "skew": {
+      "Year": 0.0,
+      "Population": 2.4515945445263005,
+      "Violent Crime Rate": 0.8018062546832,
+      "Murder Rate": 0.6173809247133666,
+      "Forcible Rape Rate": 0.8746973136247599,
+      "Robbery Rate": 1.6294552863349363,
+      "Aggraveted Assault Rate": 0.9350883185613823,
+      "Property Crime Rate": 0.11189032980734055,
+      "Burglary Rate": 0.7137746551287593,
+      "Larceny & Theft Rate": 0.005880413595193446,
+      "Motor Vehicle Theft Rate": 1.1030999119705058
+    },
+    "kurtosis": {
+      "Year": -1.2012426365870914,
+      "Population": 7.814405932945345,
+      "Violent Crime Rate": 0.14135015655587146,
+      "Murder Rate": -0.25558386442030656,
+      "Forcible Rape Rate": 1.2060735767731932,
+      "Robbery Rate": 3.7167962314935754,
+      "Aggraveted Assault Rate": 0.595742837175576,
+      "Property Crime Rate": -0.40083856046129984,
+      "Burglary Rate": 0.42870673277080673,
+      "Larceny & Theft Rate": -0.5136787238120424,
+      "Motor Vehicle Theft Rate": 1.464065900471669
+    },
+    "top_correlations": [
+      {
+        "col1": "Property Crime Rate",
+        "col2": "Larceny & Theft Rate",
+        "correlation": 0.9626575163067674
+      },
+      {
+        "col1": "Violent Crime Rate",
+        "col2": "Aggraveted Assault Rate",
+        "correlation": 0.9488676110223462
+      },
+      {
+        "col1": "Property Crime Rate",
+        "col2": "Burglary Rate",
+        "correlation": 0.8797246674442447
+      },
+      {
+        "col1": "Violent Crime Rate",
+        "col2": "Robbery Rate",
+        "correlation": 0.8601535793556148
+      },
+      {
+        "col1": "Burglary Rate",
+        "col2": "Larceny & Theft Rate",
+        "correlation": 0.7424057430381993
+      }
+    ]
+  },
+  "categorical_stats": {
+    "State": {
+      "unique_values": 50,
+      "top_5_values": {
+        "Alaska": 44,
+        "Alabama": 44,
+        "Arkansas": 44,
+        "Arizona": 44,
+        "California": 44
+      },
+      "null_count": "0",
+      "is_binary": false
+    }
+  },
+  "datetime_stats": {}
+}
+
+=== AI-INTERPRETATION ===
+Analysis:
+- The dataset contains 2200 rows and 12 columns with no missing values.
+- The data types include object (State), int64 (Year), and float64 for the crime rates and population.
+- The dataset covers crime rates, population, and other related statistics for different states over the years 1960 to 2003.
+
+Numeric Stats:
+- Population ranges from 226,167 to 35,484,453 with a mean of 4,609,092.
+- Violent Crime Rate ranges from 9.5 to 1244.3 with a mean of 369.86.
+- Property Crime Rate ranges from 573.1 to 7996 with a mean of 3736.73.
+- The top correlations are between Property Crime Rate & Larceny & Theft Rate, and Violent Crime Rate & Aggravated Assault Rate.
+
+Categorical Stats:
+- There are 50 unique values for the State column, with each state having 44 entries.
+- The State column is not binary and has no null values.
+
+Actionable Insights:
+1. Focus on states with higher crime rates for targeted interventions.
+2. Investigate the correlation between different crime rates to understand underlying patterns.
+3. Explore factors contributing to high property crime rates, especially larceny & theft.
+4. Consider the population size when analyzing crime rates to account for variations.
+5. Monitor states with consistently high crime rates for long-term trends and potential policy changes.
