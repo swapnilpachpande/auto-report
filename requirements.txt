@@ -6,3 +6,5 @@ seaborn
 numpy
 python-dotenv
 Pillow
+dotenv
+streamlit
