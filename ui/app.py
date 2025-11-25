@@ -15,7 +15,7 @@ else:
 
 
 #============Uploader==============
-st.title("File Upload (Input)")
+st.title("📜 File Upload (Input)")
 
 uploaded_file = st.file_uploader("Choose a CSV file", type=["csv","xlsx"])
 
@@ -31,6 +31,7 @@ if uploaded_file is not None:
     st.success(f"Report saved to: {output_path}")
     #display the report on UI
     st.text(report_text)
+    pdf_path = Path(output_path)
 
 #============pdf_report_download==============
 
@@ -38,24 +39,24 @@ st.title("📄 PDF report (Output)")
 
 #placeholder for pdf report download - later this will call into pdf_report.py
 
-if st.button("Generate PDF Report"):
-    # TODO: Integrate with pdf_report.py
-    # from pdf_report import generate_pdf_report
-    # pdf_path = create_report(data=your_data)
-    st.warning("PDF report generation not yet implemented.")
+# if st.button("Generate PDF Report"):
+#     # TODO: Integrate with pdf_report.py
+#     # from pdf_report import generate_pdf_report
+#     # pdf_path = create_report(data=your_data)
+#     st.warning("PDF report generation not yet implemented.")
 
 #where we expect pdf file to appear
 #adjust to match whatever pdf_report.py uses
-pdf_path = Path("reports") / "AI_Data_Report.pdf"
 
-if pdf_path.exists():
-    with pdf_path.open("rb") as f:
-        st.download_button(
-            label="Download PDF Report",
-            data=f,
-            file_name="AI_Data_Report.pdf",
-            mime="application/pdf",
-            key="download-pdf",
-        )
-else:
-    st.info("PDF report not found. Once the backend creates a pdf you will see a download button here.")
+if uploaded_file is not None:
+    if pdf_path.exists():
+        with pdf_path.open("rb") as f:
+            st.download_button(
+                label="Download PDF Report",
+                data=f,
+                file_name="AI_Data_Report.pdf",
+                mime="application/pdf",
+                key="download-pdf",
+            )
+    else:
+        st.info("PDF report not found. Once the backend creates a pdf you will see a download button here.")
