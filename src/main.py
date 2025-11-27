@@ -73,20 +73,19 @@ def generate_report(df_oai: pd.DataFrame = None):
         print('-----------------------------------------------------')
 
         
-        # TODO add the code to get the eda reports
-        # Call function from eda_visualization.py
-        # visualization_paths = eda_visualization.generate_visualizations(df)
+        # Generate EDA visualizations
+        from src.eda_visualization import generate_visualizations
+        visualization_paths = generate_visualizations(df)
 
         # Generate PDF report with visualizations
         from src.pdf_report import generate_pdf_report
         report_path = project_root / "reports"
         
-        # For now, pass None for visualization_paths; uncomment above to add visualizations
         pdf_file = generate_pdf_report(
             report_path=report_path,
             basic_stats=basic_summary,
             ai_summary=ai_summary,
-            visualization_paths=None  # Replace with visualization_paths when eda_visualization is ready
+            visualization_paths=visualization_paths
         )
 
         # Save the report with timestamp (text version for reference)
