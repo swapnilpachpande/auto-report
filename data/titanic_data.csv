@@ -1,0 +1,4 @@
+Class,Survived sum,Died sum,Total sum,Percent_Survive_Total,Percent_Died_Total
+First,203,122,325,0.624615384615,0.375384615385
+Second,118,167,285,0.414035087719,0.585964912281
+Third,178,528,706,0.252124645892,0.747875354108
