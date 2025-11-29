@@ -29,8 +29,6 @@ if uploaded_file is not None:
     df_oai = pd.read_csv(uploaded_file)
     output_path, report_text = generate_report(df_oai)
     st.success(f"Report saved to: {output_path}")
-    #display the report on UI
-    st.text(report_text)
     pdf_path = Path(output_path)
 
 #============pdf_report_download==============
@@ -60,3 +58,11 @@ if uploaded_file is not None:
             )
     else:
         st.info("PDF report not found. Once the backend creates a pdf you will see a download button here.")
+
+#display the report on UI
+
+
+if uploaded_file is not None:
+    if report_text is not None:
+        st.title("📝 Report Text Output")
+        st.text(report_text)
